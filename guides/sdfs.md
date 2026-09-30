@@ -19,7 +19,7 @@ See the [README](https://github.com/clojure-camp/sdfs) if you run into issues.
 
 ## Getting Started
 
-- *Understand the starter code* - The `draw!` function expects to be passed an SDF; for this project, this means a function that takes a vector of x and y coordinates, and returns a number. What does the starter SDF draw? Why does is draw that?
+- *Understand the starter code* - The `draw!` function expects to be passed an SDF; for this project, this means a function that takes a vector of x and y coordinates, and returns a number. What does the starter SDF draw? Why does it draw that?
 
 - *Tweak `draw!` to help with debugging* - Instead of a constant black on the inside, replace it with `(str "oklch(70% 30%" (Math/abs distance) ")")` which will set the hue based on the magnitude returned from the SDF. Thus, the hue will indicate how far a given point is from the edge of the drawn shape. This may help with understanding what's going in with the following exercises. Note that the color eventually cycles (because the oklch function happily takes any value for hue). If you prefer, you can use isolines instead: `(if (< -1 (rem distance 25) 1) "#AAA" "#000")`
 
