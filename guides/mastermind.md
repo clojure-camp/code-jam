@@ -6,7 +6,9 @@ Mastermind is a classic 2-player game of code-breaking. The 'code-maker' chooses
 
 ## Set Up
 
-(there's no repo for this one, start fresh!)
+- `git clone https://github.com/clojure-camp/mastermind.git`
+
+The repo is a barebones clj + deps project. [README here](https://github.com/clojure-camp/mastermind).
 
 ## Getting Started
 
@@ -26,8 +28,7 @@ Choose one or more of these, based on your interests:
 - make peg count and color count parametrizeable
 - make the scoring function swappable - allowing for [Bulls-and-Cows](https://en.wikipedia.org/wiki/Bulls_and_Cows) rules or Wordle rules
 - *Property Testing* - Use [test.check](https://clojure.org/guides/test_check_beginner) to property test your scoring function.
-- *AI Code-Breaker* - Write an algorithm to solve the game. Here are some ideas. [Wikipedia](https://en.wikipedia.org/wiki/Mastermind_(board_game)) lists a few different strategies.
-
+- *AI Code-Breaker* - Write an algorithm to solve the game. Here are some ideas:
   - Random - The number of solutions for a game with 4 holes and 6 colors is only 1296. You can enumerate all possible solutions, and each turn, pick one randomly (and decrease the list based on feedback).
   - Information Theory - Like Random, but, each turn it picks the guess with the highest Shannon entropy over the feedback partition.
   - Minimax - Compute the game decision tree, make the best minimax choice. Maybe save the tree to a file.
