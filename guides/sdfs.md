@@ -23,7 +23,7 @@ See the [README](https://github.com/clojure-camp/sdfs) if you run into issues.
 
 - *Tweak `draw!` to help with debugging* - Instead of a constant black on the inside, replace it with `(str "oklch(70% 30%" (Math/abs distance) ")")` which will set the hue based on the magnitude returned from the SDF. Thus, the hue will indicate how far a given point is from the edge of the drawn shape. This may help with understanding what's going in with the following exercises. Note that the color eventually cycles (because the oklch function happily takes any value for hue). If you prefer, you can use isolines instead: `(if (< -1 (rem distance 25) 1) "#AAA" "#000")`
 
-- *Draw a circle* - change the SDF function to draw a circle of radius 10 from the origin. What does a circle mean in terms of SDFs? Remember: given an `x` and a `y`, we want to return a negative number if it's inside a circle, and positive if it's outside.
+- *Draw a circle* - change the SDF function to draw a circle of radius 100 from the origin (0,0). What does a circle mean in terms of SDFs? Remember: given an `x` and a `y`, we want to return a negative number if it's inside a circle, and positive if it's outside. (Also, because the origin is at the top left, this will end up drawing a quarter circle - we'll figure out how to move it soon)
   <details>
     <summary>Hint</summary>
     For a circle at the origin, we could check if a point's distance to the origin is less than or greater than the radius.
